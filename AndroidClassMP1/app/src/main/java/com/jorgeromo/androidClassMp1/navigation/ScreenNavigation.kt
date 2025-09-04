@@ -10,10 +10,11 @@ sealed class ScreenNavigation(val route: String, val label: String, val icon: Im
     object SecondPartial : ScreenNavigation("SecondPartialRoute", "Parcial 2", Icons.Default.Event)
     object ThirdPartial : ScreenNavigation("ThirdPartialRoute", "Parcial 3", Icons.Default.Event)
     object IMC : ScreenNavigation("IMCRoute", "IMC", Icons.Default.Event)
-    object Login : ScreenNavigation("LoginRoute", "Login", Icons.Default.Event)
+    object Login : ScreenNavigation("login", "Login", Icons.Default.Person)
     object Sum : ScreenNavigation("SumRoute", "Sum", Icons.Default.Event)
     object Temperature : ScreenNavigation("TemperatureRoute", "Temperature", Icons.Default.Event)
     object StudentList : ScreenNavigation("StudentListRoute", "Estudiantes", Icons.Default.People)
     object Locations : ScreenNavigation("LocationsListRoute", "Location", Icons.Default.People)
+
 
 }

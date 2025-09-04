@@ -95,7 +95,7 @@ fun TabBarNavigationView(navController: NavHostController = rememberNavControlle
             modifier = Modifier.padding(innerPadding)
         ) {
             composable(ScreenNavigation.Ids.route) { IdsView(navController) }
-            composable(ScreenNavigation.FirstPartial.route) { FirstPartialView() }
+            composable(ScreenNavigation.FirstPartial.route) { FirstPartialView(navController) }
             composable(ScreenNavigation.SecondPartial.route) { SecondPartialView() }
             composable(ScreenNavigation.ThirdPartial.route) { ThirdPartialView(navController) }
 

@@ -30,11 +30,11 @@ class MainActivity : ComponentActivity() {
                 val scope = rememberCoroutineScope()
                 val vm: OnboardingViewModel = viewModel()
 
-                // Estado nulo mientras se obtiene el valor real del Flow
+                // Estado inicial del Flow
                 val onboardingDone: Boolean? by ds.onboardingDoneFlow.collectAsState(initial = null)
 
                 when (onboardingDone) {
-                    null -> SplashLoader() // loader / splash temporal
+                    null -> SplashLoader() // Loader temporal
                     false -> OnboardingView(
                         viewModel = vm,
                         onFinish = {
