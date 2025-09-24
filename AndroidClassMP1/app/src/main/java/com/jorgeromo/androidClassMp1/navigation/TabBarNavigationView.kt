@@ -23,6 +23,7 @@ import androidx.compose.ui.graphics.Color
 import com.jorgeromo.androidClassMp1.firstpartial.animation.views.AnimationView
 import com.jorgeromo.androidClassMp1.firstpartial.login.views.HomeView
 import com.jorgeromo.androidClassMp1.firstpartial.login.views.LoginView
+import com.jorgeromo.androidClassMp1.secondpartial.qrcode.view.QrCodeView
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -102,7 +103,7 @@ fun TabBarNavigationView(navController: NavHostController = rememberNavControlle
         ) {
             composable(ScreenNavigation.Ids.route) { IdsView(navController) }
             composable(ScreenNavigation.FirstPartial.route) { FirstPartialView(navController) }
-            composable(ScreenNavigation.SecondPartial.route) { SecondPartialView() }
+            composable(ScreenNavigation.SecondPartial.route) { SecondPartialView(navController) }
             composable(ScreenNavigation.ThirdPartial.route) { ThirdPartialView(navController) }
 
             // Rutas internas
@@ -114,6 +115,7 @@ fun TabBarNavigationView(navController: NavHostController = rememberNavControlle
             composable(ScreenNavigation.StudentList.route) { StudentView() }
             composable(ScreenNavigation.Locations.route) { LocationListScreen() }
             composable(ScreenNavigation.Home.route){ HomeView()}
+            composable(ScreenNavigation.QrCode.route) { QrCodeView() }
 
         }
     }
