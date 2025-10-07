@@ -16,6 +16,17 @@ android {
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+    android {
+        buildFeatures {
+            compose = true
+        }
+
+        composeOptions {
+            kotlinCompilerExtensionVersion = "1.5.12"
+        }
+    }
+
+
 
     buildTypes {
         release {
@@ -95,6 +106,19 @@ dependencies {
     implementation("androidx.compose.ui:ui:1.7.2")
     implementation("androidx.compose.material3:material3:1.3.0")
     implementation("androidx.activity:activity-compose:1.9.3")
+
+    implementation (platform("androidx.compose:compose-bom:2024.10.01"))
+    implementation ("androidx.compose.ui:ui")
+    implementation ("androidx.compose.material3:material3")
+    implementation ("androidx.activity:activity-compose:1.9.2")
+    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.8.6")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6")
+
+    // Google Location Services
+    implementation ("com.google.android.gms:play-services-location:21.3.0")
+
+    // Coroutines
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
 
 
 }

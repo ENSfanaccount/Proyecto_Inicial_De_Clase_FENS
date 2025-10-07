@@ -23,6 +23,7 @@ import com.jorgeromo.androidClassMp1.secondpartial.home.HomeRepository
 import com.jorgeromo.androidClassMp1.secondpartial.home.views.HomeViewEvents
 import com.jorgeromo.androidClassMp1.secondpartial.home.network.HomeApi
 import com.jorgeromo.androidClassMp1.secondpartial.home.viewmodel.HomeViewModel
+import com.jorgeromo.androidClassMp1.secondpartial.location.LocationCoordianteView
 import com.jorgeromo.androidClassMp1.secondpartial.qrcode.view.QrCodeView
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -116,6 +117,9 @@ fun TabBarNavigationView(navController: NavHostController = rememberNavControlle
             composable(ScreenNavigation.Home.route) { HomeView() }
             composable(ScreenNavigation.QrCode.route) { QrCodeView() }
 
+            composable(ScreenNavigation.LocationCoordinate.route) {
+                LocationCoordianteView()
+
             composable(ScreenNavigation.HomeEvents.route) {
                 val viewModel: HomeViewModel = remember {
                     val retrofit = Retrofit.Builder()
@@ -134,7 +138,9 @@ fun TabBarNavigationView(navController: NavHostController = rememberNavControlle
                 }
 
                 HomeViewEvents(uiState = uiState)
+
+
             }
         }
     }
-}
+}}
