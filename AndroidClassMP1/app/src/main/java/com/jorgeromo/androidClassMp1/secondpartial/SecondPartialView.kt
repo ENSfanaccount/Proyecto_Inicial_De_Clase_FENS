@@ -34,5 +34,16 @@ fun SecondPartialView(navController: NavHostController) {
         }
 
         Spacer(modifier = Modifier.height(16.dp))
+
+        Text( "Home")
+
+        Button(
+            onClick = { navController.navigate(ScreenNavigation.HomeEvents.route) },
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text("Ir a home")
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
     }
 }

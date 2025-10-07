@@ -20,6 +20,7 @@ sealed class ScreenNavigation(val route: String, val label: String, val icon: Im
     object Home : ScreenNavigation("HomeRoute","Home",Icons.Default.People)
     object Animation : ScreenNavigation("AnimationRoute", "Animation", Icons.Default.People)
     object QrCode : ScreenNavigation("QrCodeRoute", "Código QR", Icons.Default.QrCode)
+    object HomeEvents : ScreenNavigation(route = "HomeEventsRoute", label = "Eventos", icon = Icons.Default.Event)
 
 
 }
